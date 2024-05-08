@@ -2,33 +2,58 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #grupoContainer {
     margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    /* Limita a largura máxima do container */
 }
+
 .grupo {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adiciona sombra para melhor visibilidade */
 }
-button, select {
+
+button,
+select {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin: 10px;
+    margin: 5px;
     border-radius: 5px;
+    width: auto;
+    /* Garante que os botões e seletores se ajustem ao conteúdo */
 }
+
 button {
     background-color: #007bff;
     color: white;
     border: none;
+    transition: background-color 0.3s ease;
+    /* Suaviza a transição de cor */
 }
+
 button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+
+    button,
+    select {
+        width: 100%;
+        /* Faz com que o botão e o seletor ocupem toda a largura em telas pequenas */
+        margin-top: 10px;
+    }
 }
